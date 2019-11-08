@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">E-Stuffa</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="informa_es_do_cultivo">informações do cultivo</string>
+    <string name="modo_de_opera_o">Modo de operação:</string>
+    <string name="automatico">automatico</string>
+    <string name="status_do_cultivo">Status do cultivo:</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="_32">32</string>
+    <string name="c">ºC</string>
+    <string name="umidade">Umidade</string>
+    <string name="_85">85</string>
+    <string name="fg">%</string>
+    <string name="ilumina_o">Iluminação</string>
+    <string name="modo">Modo:</string>
+</resources>

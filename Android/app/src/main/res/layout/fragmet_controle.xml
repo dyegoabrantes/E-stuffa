@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:gravity="center"
+            android:text="Toque para alterar o modo de cultivo"
+            android:textColor="@android:color/darker_gray" />
+
+        <ToggleButton
+            android:id="@+id/modoAutomaticoAtivadoToggle"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="ToggleButton"
+            android:textOff="Modo automatico ativado"
+            android:textOn="Modo manual ativado" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="right"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_medium"
+                android:gravity="left"
+                android:text="Regar com solo"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/snp_vertical_rega"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/number_picker_bg"
+                    android:gravity="center"
+                    app:snp_buttonIconLeft="@drawable/ic_up"
+                    app:snp_buttonIconRight="@drawable/ic_down"
+                    app:snp_maxValue="70"
+                    app:snp_minValue="0"
+                    app:snp_orientation="vertical"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="5"
+                    app:snp_updateInterval="100"
+                    app:snp_value="0"
+                    app:snp_value_text_color="?android:attr/colorActivatedHighlight"
+                    app:snp_value_text_size="30dp">
+
+                </com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:gravity="center"
+                    android:text="% umido"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OK" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_medium"
+                android:gravity="center"
+                android:text="Iluminar todo dia durante"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/snp_vertical_luz_hora"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/number_picker_bg"
+                    android:gravity="center"
+                    app:snp_buttonIconLeft="@drawable/ic_up"
+                    app:snp_buttonIconRight="@drawable/ic_down"
+                    app:snp_maxValue="23"
+                    app:snp_minValue="0"
+                    app:snp_orientation="vertical"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="100"
+                    app:snp_value="0"
+                    app:snp_value_text_color="?android:attr/colorActivatedHighlight"
+                    app:snp_value_text_size="30dp" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:gravity="center"
+                    android:text="horas"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/snp_vertical_luz_minutos"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/number_picker_bg"
+                    android:gravity="center"
+                    app:snp_buttonIconLeft="@drawable/ic_up"
+                    app:snp_buttonIconRight="@drawable/ic_down"
+                    app:snp_maxValue="50"
+                    app:snp_minValue="0"
+                    app:snp_orientation="vertical"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="10"
+                    app:snp_updateInterval="100"
+                    app:snp_value="0"
+                    app:snp_value_text_color="?android:attr/colorActivatedHighlight"
+                    app:snp_value_text_size="30dp">
+
+                </com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:gravity="center"
+                    android:text="minutos"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OK" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_medium"
+                android:gravity="center"
+                android:text="Ventilar a cada"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/snp_vertical_ventila_hora"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/number_picker_bg"
+                    android:gravity="center"
+                    app:snp_buttonIconLeft="@drawable/ic_up"
+                    app:snp_buttonIconRight="@drawable/ic_down"
+                    app:snp_maxValue="12"
+                    app:snp_minValue="1"
+                    app:snp_orientation="vertical"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="4"
+                    app:snp_updateInterval="100"
+                    app:snp_value="1"
+                    app:snp_value_text_color="?android:attr/colorActivatedHighlight"
+                    app:snp_value_text_size="30dp">
+
+                </com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:gravity="center"
+                    android:text="horas"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_medium"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:rotation="-90"
+                android:text="durante"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                    android:id="@+id/snp_vertical_ventila_minutos"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/number_picker_bg"
+                    android:gravity="center"
+                    app:snp_buttonIconLeft="@drawable/ic_up"
+                    app:snp_buttonIconRight="@drawable/ic_down"
+                    app:snp_maxValue="60"
+                    app:snp_minValue="0"
+                    app:snp_orientation="vertical"
+                    app:snp_scrollEnabled="true"
+                    app:snp_stepSize="1"
+                    app:snp_updateInterval="100"
+                    app:snp_value="0"
+                    app:snp_value_text_color="?android:attr/colorActivatedHighlight"
+                    app:snp_value_text_size="30dp">
+
+                </com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:gravity="center"
+                    android:text="minutos"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OK" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
