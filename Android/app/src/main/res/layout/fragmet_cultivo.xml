@@ -212,23 +212,12 @@
                     android:textColor="@android:color/darker_gray"
                     android:textSize="22sp" />
 
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:gravity="center"
-                    android:text="12h/12h"
-                    android:textColor="@android:color/darker_gray" />
-
-                <ImageView
-                    android:id="@+id/iluminaIcon"
+                <Button
+                    android:id="@+id/iluminaButton"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="12dp"
-                    android:tint="?attr/colorBackgroundFloating"
-                    app:srcCompat="@drawable/ic_wb_sunny_black_24dp" />
+                    android:background="@drawable/ic_wb_sunny_black_24dp" />
 
                 <TextView
                     android:id="@+id/ilumina_status_texto"
@@ -264,23 +253,12 @@
                     android:textColor="@android:color/darker_gray"
                     android:textSize="22sp" />
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:gravity="center"
-                    android:text="30m/30m"
-                    android:textColor="@android:color/darker_gray" />
-
-                <ImageView
-                    android:id="@+id/ventilaIcon"
+                <Button
+                    android:id="@+id/ventilaButton"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="12dp"
-                    android:tint="?attr/colorBackgroundFloating"
-                    app:srcCompat="@drawable/ic_toys_black_24dp" />
+                    android:background="@drawable/ic_toys_black_24dp" />
 
                 <TextView
                     android:id="@+id/ventila_status_texto"
@@ -315,23 +293,12 @@
                     android:textColor="@android:color/darker_gray"
                     android:textSize="22sp" />
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:gravity="center"
-                    android:text="quando seco"
-                    android:textColor="@android:color/darker_gray" />
-
-                <ImageView
-                    android:id="@+id/regaIcon"
+                <Button
+                    android:id="@+id/regaButton"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="12dp"
-                    android:tint="?attr/colorBackgroundFloating"
-                    app:srcCompat="@drawable/ic_invert_colors_black_24dp" />
+                    android:background="@drawable/ic_invert_colors_off_24dp" />
 
                 <TextView
                     android:id="@+id/rega_status_texto"
